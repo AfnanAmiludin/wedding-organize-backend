@@ -13,15 +13,9 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('payments', function (Blueprint $table) {
+        Schema::create('wos', function (Blueprint $table) {
             $table->id();
-            $table->string('name_client');
-            $table->string('total_cash');
-            $table->string('terbayar');
-            $table->string('keterangan');
-            $table->date('tanggal');
-            $table->bigInteger('wo_id');
-            $table->softDeletes();
+            $table->bigInteger('user_id');
             $table->timestamps();
         });
     }
@@ -33,6 +27,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('payments');
+        Schema::dropIfExists('wos');
     }
 };

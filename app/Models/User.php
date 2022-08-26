@@ -3,6 +3,8 @@
 namespace App\Models;
 
 // use Illuminate\Contracts\Auth\MustVerifyEmail;
+
+use GuzzleHttp\Client;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -43,4 +45,18 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    public function client()
+    {
+        return $this->hasMany(Client::class, 'user_id', 'id');
+    }
+
+    public function member()
+    {
+        return $this->hasMany(member::class, 'user_id', 'id');
+    }
+    public function wo()
+    {
+        return $this->hasMany(wo::class, 'user_id', 'id');
+    }
 }

@@ -22,6 +22,7 @@ return new class extends Migration
             $table->time('jam');
             $table->bigInteger('wo_id');
             $table->bigInteger('member_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

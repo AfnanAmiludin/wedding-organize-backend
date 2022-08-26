@@ -20,6 +20,7 @@ return new class extends Migration
             $table->date('tanggal');
             $table->time('jam');
             $table->bigInteger('payment_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

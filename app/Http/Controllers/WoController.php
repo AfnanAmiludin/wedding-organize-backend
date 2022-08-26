@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\PaymentDetail;
+use App\Models\wo;
 use Illuminate\Http\Request;
 
-class PaymentDetailController extends Controller
+class WoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -31,10 +31,10 @@ class PaymentDetailController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\PaymentDetail  $paymentDetail
+     * @param  \App\Models\wo  $wo
      * @return \Illuminate\Http\Response
      */
-    public function show(PaymentDetail $paymentDetail)
+    public function show(wo $wo)
     {
         //
     }
@@ -43,10 +43,10 @@ class PaymentDetailController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\PaymentDetail  $paymentDetail
+     * @param  \App\Models\wo  $wo
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, PaymentDetail $paymentDetail)
+    public function update(Request $request, wo $wo)
     {
         //
     }
@@ -54,10 +54,10 @@ class PaymentDetailController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\PaymentDetail  $paymentDetail
+     * @param  \App\Models\wo  $wo
      * @return \Illuminate\Http\Response
      */
-    public function destroy(PaymentDetail $paymentDetail)
+    public function destroy(wo $wo)
     {
         //
     }
